@@ -22,3 +22,5 @@ urlpatterns = [
     path('', include('quotesapp.urls')),
     path('users/', include('users.urls')),
 ]
+
+handler404 = 'quotesapp.views.view_404'
