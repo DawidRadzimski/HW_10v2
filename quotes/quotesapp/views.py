@@ -102,6 +102,3 @@ def import_data(request):
             quote_object[0].save()
 
     return redirect(to="quotesapp:main")
-
-def view_404(request, exception):
-    return HttpResponseNotFound("This site is unavalible.")
