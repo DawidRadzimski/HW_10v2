@@ -5,6 +5,7 @@ from django.contrib import messages
 from .web_scraper import new_data
 from datetime import datetime
 from django.core.paginator import Paginator
+from django.http import HttpResponseNotFound
 
 
 # Create your views here.
@@ -101,3 +102,6 @@ def import_data(request):
             quote_object[0].save()
 
     return redirect(to="quotesapp:main")
+
+def view_404(request, exception):
+    return HttpResponseNotFound("This site is unavalible.")
